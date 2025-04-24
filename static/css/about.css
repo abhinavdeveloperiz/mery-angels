@@ -1,0 +1,256 @@
+/* Hero Section */
+.about-hero {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #FFE8E8, #E8F9FF);
+    border-radius: 0 0 30px 30px;
+}
+
+.about-hero-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-hero-content h1 {
+    font-size: 3.5rem;
+    color: #FF6B6B;
+    margin-bottom: 1rem;
+    font-family: 'Comic Sans MS', cursive;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.about-hero-content p {
+    font-size: 1.2rem;
+    color: #4A4A4A;
+    margin-bottom: 2rem;
+}
+
+.about-hero-image {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 2rem;
+}
+
+.about-hero-image img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* School Introduction */
+.school-intro {
+    padding: 5rem 2rem;
+    background-color: #fff;
+}
+
+.school-intro .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 3rem;
+}
+
+.school-intro-content,
+.school-image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.school-intro-content h2 {
+    font-size: 2.5rem;
+    color: #4A4A4A;
+    margin-bottom: 1.5rem;
+    font-family: 'Comic Sans MS', cursive;
+    position: relative;
+}
+
+.school-intro-content h2::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100px;
+    height: 5px;
+    background: linear-gradient(90deg, #FF6B6B, #FFD166);
+    border-radius: 10px;
+}
+
+.school-intro-content p {
+    font-size: 1.1rem;
+    color: #4A4A4A;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.school-image img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.school-image img:hover {
+    transform: scale(1.03);
+}
+
+/* Programs Section */
+.programs {
+    padding: 5rem 2rem;
+    background-color: #f9f9f9;
+    border-radius: 30px;
+    margin: 2rem 0;
+}
+
+.programs h2 {
+    font-size: 2.5rem;
+    color: #4A4A4A;
+    text-align: center;
+    margin-bottom: 3rem;
+    font-family: 'Comic Sans MS', cursive;
+}
+
+.programs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.program-card {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.program-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.program-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, #FF6B6B, #FFD166);
+}
+
+.program-icon {
+    font-size: 2.5rem;
+    color: #FF6B6B;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.program-card h3 {
+    font-size: 1.5rem;
+    color: #4A4A4A;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-family: 'Comic Sans MS', cursive;
+}
+
+.program-card p,
+.program-card ul {
+    color: #4A4A4A;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.program-card ul {
+    padding-left: 1.5rem;
+    text-align: left;
+}
+
+.program-card ul li {
+    margin-bottom: 0.5rem;
+}
+
+/* Why Choose Us Section */
+.why-choose-us {
+    padding: 5rem 2rem;
+    background-color: #fff;
+}
+
+.why-choose-us h2 {
+    font-size: 2.5rem;
+    color: #4A4A4A;
+    text-align: center;
+    margin-bottom: 3rem;
+    font-family: 'Comic Sans MS', cursive;
+    position: relative;
+}
+
+.why-choose-us h2::after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 5px;
+    background: linear-gradient(90deg, #FF6B6B, #FFD166);
+    border-radius: 10px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.feature {
+    text-align: center;
+    padding: 2rem;
+    border-radius: 20px;
+    background-color: #f9f9f9;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    color: #FF6B6B;
+    margin-bottom: 1.5rem;
+}
+
+.feature h3 {
+    font-size: 1.3rem;
+    color: #4A4A4A;
+    margin-bottom: 1rem;
+    font-family: 'Comic Sans MS', cursive;
+}
+
+.feature p {
+    font-size: 1rem;
+    color: #4A4A4A;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+    .about-hero {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 6rem 2rem;
+    }
+
+    .about-hero-content {
+        text-align: left;
+        padding-right: 2rem;
+    }
+
+    .about-hero-image {
+        margin-bottom: 0;
+    }
+}

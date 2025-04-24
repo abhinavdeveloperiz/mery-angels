@@ -1,0 +1,146 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block main_block %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+
+<!-- About Us Hero Section -->
+<section class="about-hero">
+    <div class="about-hero-content">
+        <h1>About Us</h1>
+        <p>Learn more about Mary Angels Montessori School</p>
+    </div>
+    <div class="about-hero-image">
+        <img src="{% static 'images/home.jpg' %}" alt="Mary Angels Montessori School">
+    </div>
+</section>
+
+<!-- School Introduction -->
+<section class="school-intro">
+    <div class="container">
+        <div class="school-intro-content">
+            <h2>Welcome to Mary Angels</h2>
+            <p>Mary Angels is one of the best Montessori Schools and Early Child Care Centres in Kerala. We are dedicated to providing a nurturing environment where children can learn, grow, and thrive.</p>
+            <p>Our mission is to create a foundation of love for learning through a child-centered approach that values each child's unique abilities and potential.</p>
+        </div>
+        <div class="school-image">
+            <img src="{% static 'images/home.jpg' %}" alt="School Building">
+        </div>
+    </div>
+</section>
+
+<!-- Programs Section -->
+<section class="programs">
+    <div class="container">
+        <h2>Our Programs</h2>
+        <div class="programs-grid">
+            <div class="program-card">
+                <div class="program-icon">
+                    <i class="fas fa-baby"></i>
+                </div>
+                <h3>Infant Care</h3>
+                <p>Specialized care for babies from 6 months to 2 years of age</p>
+                <ul>
+                    <li>Nurturing environment</li>
+                    <li>Age-appropriate activities</li>
+                    <li>Individual attention</li>
+                </ul>
+            </div>
+
+            <div class="program-card">
+                <div class="program-icon">
+                    <i class="fas fa-child"></i>
+                </div>
+                <h3>Toddlers Care</h3>
+                <p>Engaging program for children from 2 years to 3 years</p>
+                <ul>
+                    <li>Sensorial activities</li>
+                    <li>Language development</li>
+                    <li>Motor skills development</li>
+                </ul>
+            </div>
+
+            <div class="program-card">
+                <div class="program-icon">
+                    <i class="fas fa-book-reader"></i>
+                </div>
+                <h3>Pre KG</h3>
+                <p>Learning environment for children up to 4 years</p>
+                <ul>
+                    <li>Basic concepts introduction</li>
+                    <li>Social interaction</li>
+                    <li>Creative expression</li>
+                </ul>
+            </div>
+
+            <div class="program-card">
+                <div class="program-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h3>Junior & Senior KG</h3>
+                <p>Comprehensive education for children aged 4 to 6 years</p>
+                <ul>
+                    <li>Academic foundation</li>
+                    <li>Independence building</li>
+                    <li>Critical thinking skills</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Why Choose Us -->
+<section class="why-choose-us">
+    <div class="container">
+        <h2>Why Choose Mary Angels?</h2>
+        <div class="features-grid">
+            <div class="feature">
+                <div class="feature-icon">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <h3>Loving Environment</h3>
+                <p>Our teachers create a warm, nurturing space where children feel safe and valued</p>
+            </div>
+
+            <div class="feature">
+                <div class="feature-icon">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                </div>
+                <h3>Qualified Teachers</h3>
+                <p>Our staff are trained in Montessori methodology and early childhood education</p>
+            </div>
+
+            <div class="feature">
+                <div class="feature-icon">
+                    <i class="fas fa-bus"></i>
+                </div>
+                <h3>Transportation</h3>
+                <p>Vehicle facility available for all students</p>
+            </div>
+
+            <div class="feature">
+                <div class="feature-icon">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <h3>Extended Hours</h3>
+                <p>Day care facilities available from 7:30 AM to 6:00 PM</p>
+            </div>
+
+            <div class="feature">
+                <div class="feature-icon">
+                    <i class="fas fa-puzzle-piece"></i>
+                </div>
+                <h3>Activity-Based Learning</h3>
+                <p>Diverse activities to stimulate mental and physical development</p>
+            </div>
+
+            <div class="feature">
+                <div class="feature-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3>Small Class Sizes</h3>
+                <p>Ensuring individual attention for every child</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

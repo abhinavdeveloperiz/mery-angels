@@ -1,0 +1,146 @@
+    {% extends 'base.html' %}
+    {% load static %}
+    {% block main_block %}
+
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+
+
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>One of The Best Montessori School and Early Child Care Centre in Kerala</h1>
+                <p>Nurturing young minds with care, creativity and compassion since 2010</p>
+                <div class="hero-buttons">
+                    <a href="contact.html" class="btn primary-btn">Enroll Now</a>
+                    <a href="about.html" class="btn secondary-btn">Learn More</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="{% static 'images/home.jpg' %}" alt="Happy children learning">
+            </div>
+        </div>
+    </section>
+
+    <section class="highlights">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose Mary Angels?</h2>
+                <p>Where learning meets play and growth happens every day</p>
+            </div>
+            <div class="highlight-cards">
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-baby"></i>
+                    </div>
+                    <h3>Infant Care</h3>
+                    <p>Specialized care for infants from 6 months to 2 years</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-child"></i>
+                    </div>
+                    <h3>Toddler Programs</h3>
+                    <p>Engaging activities for toddlers from 2 to 3 years</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-book-reader"></i>
+                    </div>
+                    <h3>Pre-KG to Senior KG</h3>
+                    <p>Comprehensive education for children aged 3 to 6 years</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Day Care Available</h3>
+                    <p>Extended hours from 7:30 AM to 6:00 PM</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="activities">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Activities</h2>
+                <p>Holistic development through diverse and engaging activities</p>
+            </div>
+            <div class="activities-grid">
+                <div class="activity">
+                    <img src="{% static 'images/home.jpg' %}" alt="Art and Craft">
+                    <h3>Art and Craft</h3>
+                </div>
+                <div class="activity">
+                    <img src="{% static 'images/home.jpg' %}" alt="Yoga">
+                    <h3>Yoga</h3>
+                </div>
+                <div class="activity">
+                    <img src="{% static 'images/home.jpg' %}" alt="Zumba">
+                    <h3>Zumba</h3>
+                </div>
+                <div class="activity">
+                    <img src="{% static 'images/home.jpg' %}" alt="Non-Fire Cooking">
+                    <h3>Non-Fire Cooking</h3>
+                </div>
+                <div class="activity">
+                    <img src="{% static 'images/home.jpg' %}" alt="Storytelling">
+                    <h3>Storytelling</h3>
+                </div>
+                <div class="activity">
+                    <img src="{% static 'images/home.jpg' %}" alt="Music & Dance">
+                    <h3>Music & Dance</h3>
+                </div>
+            </div>
+            <div class="activity-cta">
+                <a href="" class="btn primary-btn">View All Activities</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Parents Say</h2>
+                <p>Trusted by hundreds of families across Kerala</p>
+            </div>
+            <div class="testimonial-slider">
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"Mary Angels has been a second home for my daughter. The care and education provided are exceptional."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="{% static 'images/home.jpg' %}" alt="Parent">
+                        <div>
+                            <h4>Priya Thomas</h4>
+                            <p>Parent of Aanya, 4 years</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="registration-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Registration Open for 2025-26</h2>
+                <p>Limited seats available. Contact us today to secure your child's place!</p>
+                <div class="contact-numbers">
+                    <a href="tel:+917012480055"><i class="fas fa-phone-alt"></i> +91 70124 80055</a>
+                    <a href="tel:+919778332252"><i class="fas fa-phone-alt"></i> +91 977 833 2252</a>
+                </div>
+                <a href="" class="btn primary-btn">Register Now</a>
+            </div>
+            <div class="cta-image">
+                <img src="{% static 'images/home.jpg' %}" alt="Happy children at Mary Angels">
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    {% endblock %}

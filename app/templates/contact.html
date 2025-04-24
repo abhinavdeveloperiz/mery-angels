@@ -1,0 +1,122 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block main_block %}
+<link rel="stylesheet" href="{% static 'css/contact.css' %}">
+
+<!-- Simple Contact Header -->
+<section class="contact-header">
+    <div class="container">
+        <h1>Contact Us</h1>
+        <p>We'd love to hear from you!</p>
+        <img src="{% static 'images/home.jpg' %}" alt="Mary Angels Montessori School" class="header-img">
+    </div>
+</section>
+
+<!-- Quick Contact Details -->
+<section class="quick-contact">
+    <div class="container">
+        <div class="contact-flex">
+            <div class="contact-item">
+                <i class="fas fa-phone-alt"></i>
+                <h3>Call Us</h3>
+                <p><a href="tel:+917012480055">+91 70124 80055</a></p>
+                <p><a href="tel:+919778332252">+91 977 833 2252</a></p>
+            </div>
+            
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <h3>Email Us</h3>
+                <p><a href="mailto:info@maryangels.com">info@maryangels.com</a></p>
+            </div>
+            
+            <div class="contact-item">
+                <i class="fas fa-clock"></i>
+                <h3>School Hours</h3>
+                <p>9:00 AM - 3:30 PM</p>
+                <p>Day Care: 7:30 AM - 6:00 PM</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Simple Contact Form -->
+<section class="contact-form-section">
+    <div class="container">
+        <div class="form-container">
+            <h2>Send Us a Message</h2>
+            
+            <form action="" method="POST">
+                {% csrf_token %}
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Select Subject</option>
+                            <option value="admission">Admission Inquiry</option>
+                            <option value="tour">School Tour Request</option>
+                            <option value="daycare">Day Care Inquiry</option>
+                            <option value="transport">Transportation Inquiry</option>
+                            <option value="feedback">Feedback</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-group full-width">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- Location Section -->
+<section class="location-section">
+    <div class="container">
+        <div class="location-container">
+            <div class="location-info">
+                <h2>Visit Our School</h2>
+                <p><i class="fas fa-map-marker-alt"></i> Mary Angels Montessori School</p>
+                <p>Kerala, India</p>
+                <p class="highlight-text">Day care facilities available 7:30 AM to 6:00 PM</p>
+                <p>Vehicle facility available for all students</p>
+            </div>
+            <div class="location-map">
+                <img src="{% static 'images/home.jpg' %}" alt="Map" class="map-img">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Simple CTA -->
+<section class="simple-cta">
+    <div class="container">
+        <h2>Registration Started!</h2>
+        <p>Secure a spot for your child at Mary Angels Montessori School</p>
+        <a href="#" class="cta-button">Register Now</a>
+    </div>
+</section>
+{% endblock %}

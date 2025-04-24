@@ -1,0 +1,244 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block main_block %}
+
+<link rel="stylesheet" href="{% static 'css/services.css' %}">
+
+<section class="page-banner">
+    <div class="container">
+        <h1>Our Services</h1>
+        <p>Providing holistic development for children from 6 months to 6 years</p>
+    </div>
+</section>
+
+<section class="age-groups">
+    <div class="container">
+        <div class="section-header">
+            <h2>Age-Specific Programs</h2>
+            <p>Tailored learning experiences for every developmental stage</p>
+        </div>
+        <div class="programs">
+            <div class="program">
+                <div class="program-icon">
+                    <i class="fas fa-baby"></i>
+                </div>
+                <div class="program-content">
+                    <h3>Infant Care</h3>
+                    <span class="age-range">6 months - 2 years</span>
+                    <p>Our infant program provides a nurturing environment where babies can explore and develop at their own pace. Our trained caregivers focus on sensory stimulation, motor skills development, and forming secure attachments.</p>
+                    <ul class="program-features">
+                        <li><i class="fas fa-check-circle"></i> Personalized care routines</li>
+                        <li><i class="fas fa-check-circle"></i> Sensory development activities</li>
+                        <li><i class="fas fa-check-circle"></i> Early language development</li>
+                        <li><i class="fas fa-check-circle"></i> Motor skills enhancement</li>
+                    </ul>
+                </div>
+                <div class="program-image">
+                    <img src="{% static 'images/home.jpg' %}" alt="Infant Care">
+                </div>
+            </div>
+
+            <div class="program">
+                <div class="program-icon">
+                    <i class="fas fa-child"></i>
+                </div>
+                <div class="program-content">
+                    <h3>Toddler Care</h3>
+                    <span class="age-range">2 years - 3 years</span>
+                    <p>Our toddler program fosters independence and curiosity. Children engage in structured play-based learning that enhances their cognitive, social, and physical development.</p>
+                    <ul class="program-features">
+                        <li><i class="fas fa-check-circle"></i> Self-help skills development</li>
+                        <li><i class="fas fa-check-circle"></i> Language enrichment activities</li>
+                        <li><i class="fas fa-check-circle"></i> Social skill building</li>
+                        <li><i class="fas fa-check-circle"></i> Potty training support</li>
+                        <li><i class="fas fa-check-circle"></i> Introduction to basic concepts</li>
+                    </ul>
+                </div>
+                <div class="program-image">
+                    <img src="{% static 'images/home.jpg' %}" alt="Toddler Care">
+                </div>
+            </div>
+
+            <div class="program">
+                <div class="program-icon">
+                    <i class="fas fa-school"></i>
+                </div>
+                <div class="program-content">
+                    <h3>Pre-KG</h3>
+                    <span class="age-range">3 years - 4 years</span>
+                    <p>Our Pre-KG program introduces children to a structured learning environment while maintaining a play-based approach. Children develop pre-literacy and pre-numeracy skills while enhancing their creativity and social abilities.</p>
+                    <ul class="program-features">
+                        <li><i class="fas fa-check-circle"></i> Phonics introduction</li>
+                        <li><i class="fas fa-check-circle"></i> Number recognition</li>
+                        <li><i class="fas fa-check-circle"></i> Fine motor skill activities</li>
+                        <li><i class="fas fa-check-circle"></i> Creative expression</li>
+                        <li><i class="fas fa-check-circle"></i> Cooperative play</li>
+                    </ul>
+                </div>
+                <div class="program-image">
+                    <img src="{% static 'images/home.jpg' %}" alt="Pre-KG">
+                </div>
+            </div>
+
+            <div class="program">
+                <div class="program-icon">
+                    <i class="fas fa-book-reader"></i>
+                </div>
+                <div class="program-content">
+                    <h3>Junior & Senior KG</h3>
+                    <span class="age-range">4 years - 6 years</span>
+                    <p>Our kindergarten program prepares children for primary school through a balanced curriculum that builds academic readiness, independence, and social-emotional skills.</p>
+                    <ul class="program-features">
+                        <li><i class="fas fa-check-circle"></i> Early reading and writing</li>
+                        <li><i class="fas fa-check-circle"></i> Mathematical concepts</li>
+                        <li><i class="fas fa-check-circle"></i> Science exploration</li>
+                        <li><i class="fas fa-check-circle"></i> Problem-solving skills</li>
+                        <li><i class="fas fa-check-circle"></i> School readiness activities</li>
+                    </ul>
+                </div>
+                <div class="program-image">
+                    <img src="{% static 'images/home.jpg' %}" alt="Kindergarten">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="highlight-services">
+    <div class="container">
+        <div class="service-card">
+            <div class="service-icon">
+                <i class="fas fa-home"></i>
+            </div>
+            <h3>Day Care</h3>
+            <p>Extended hours care from 7:30 AM to 6:00 PM for working parents.</p>
+        </div>
+        <div class="service-card">
+            <div class="service-icon">
+                <i class="fas fa-bus-alt"></i>
+            </div>
+            <h3>Transportation</h3>
+            <p>Safe and reliable vehicle facility available for pick-up and drop-off.</p>
+        </div>
+        <div class="service-card">
+            <div class="service-icon">
+                <i class="fas fa-utensils"></i>
+            </div>
+            <h3>Nutritious Meals</h3>
+            <p>Balanced, healthy meals prepared fresh daily for all children.</p>
+        </div>
+    </div>
+</section>
+
+<section class="activities">
+    <div class="container">
+        <div class="section-header">
+            <h2>Enrichment Activities</h2>
+            <p>Holistic development through diverse learning experiences</p>
+        </div>
+        <div class="activity-categories">
+            <!-- Physical Development -->
+            <div class="category">
+                <h3>Physical Development</h3>
+                <div class="activity-items">
+                    <div class="activity-item">
+                        <img src="{% static 'images/home.jpg' %}" alt="Yoga">
+                        <h4>Yoga</h4>
+                        <p>Age-appropriate yoga poses that improve balance, flexibility and concentration.</p>
+                    </div>
+                    <div class="activity-item">
+                        <img src="{% static 'images/home.jpg' %}" alt="Zumba">
+                        <h4>Zumba</h4>
+                        <p>Fun, energetic dance routines that enhance coordination and physical fitness.</p>
+                    </div>
+                    <div class="activity-item">
+                        <img src="{% static 'images/home.jpg' %}" alt="Aerobics">
+                        <h4>Aerobics</h4>
+                        <p>Simple aerobic exercises to promote cardiovascular health and stamina.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Creative Expression -->
+            <div class="category">
+                <h3>Creative Expression</h3>
+                <div class="activity-items">
+                    <div class="activity-item">
+                        <img src="{% static 'images/home.jpg' %}" alt="Art and Craft">
+                        <h4>Art and Craft</h4>
+                        <p>Creative projects that develop fine motor skills and artistic expression.</p>
+                    </div>
+                    <div class="activity-item">
+                        <img src="{% static 'images/home.jpg' %}" alt="Dance and Music">
+                        <h4>Dance and Music</h4>
+                        <p>Rhythmic activities that foster musical appreciation and self-expression.</p>
+                    </div>
+                    <div class="activity-item">
+                        <img src="{% static 'images/home.jpg' %}" alt="Coloring and Drawing">
+                        <h4>Coloring & Drawing</h4>
+                        <p>Artistic activities that enhance creativity and fine motor control.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cognitive Development -->
+            <div class="category">
+                <h3>Cognitive Development</h3>
+                <div class="activity-items">
+                    <div class="activity-item">
+                        <img src="{% static 'images/home.jpg' %}" alt="Phonics Practice">
+                        <h4>Phonics Practice</h4>
+                        <p>Systematic approach to teaching reading through letter-sound relationships.</p>
+                    </div>
+                    <div class="activity-item">
+                        <img src="{% static 'images/home.jpg' %}" alt="Abacus">
+                        <h4>Abacus</h4>
+                        <p>Mathematical tool that builds number sense and mental calculation skills.</p>
+                    </div>
+                    <div class="activity-item">
+                        <img src="{% static 'images/home.jpg' %}" alt="Storytelling">
+                        <h4>Storytelling</h4>
+                        <p>Interactive narration that enhances language skills and imagination.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Life Skills -->
+            <div class="category">
+                <h3>Life Skills</h3>
+                <div class="activity-items">
+                    <div class="activity-item">
+                        <img src="{% static 'images/home.jpg' %}" alt="Non-Fire Cooking">
+                        <h4>Non-Fire Cooking</h4>
+                        <p>Simple food preparation activities that teach basic cooking skills safely.</p>
+                    </div>
+                    <div class="activity-item">
+                        <img src="{% static 'images/home.jpg' %}" alt="Writing Practice">
+                        <h4>Writing Practice</h4>
+                        <p>Age-appropriate exercises to develop handwriting and fine motor skills.</p>
+                    </div>
+                    <div class="activity-item">
+                        <img src="{% static 'images/home.jpg' %}" alt="Practical Life Skills">
+                        <h4>Practical Life Skills</h4>
+                        <p>Activities that promote independence and self-care abilities.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="registration-cta">
+    <div class="container">
+        <div class="cta-content">
+            <h2>Give Your Child the Best Start in Life</h2>
+            <p>Limited seats available for all age groups. Contact us today to schedule a visit or enroll your child.</p>
+            <div class="contact-numbers">
+                <a href="tel:+917012480000">+91 70124 80000</a>
+                <a href="tel:+919495960000">+91 94959 60000</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
