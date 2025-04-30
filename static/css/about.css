@@ -71,6 +71,7 @@ h3 {
 p {
     margin-bottom: 1rem;
     font-size: 1.1rem;
+    text-align: justify;
   
 }
 
@@ -86,7 +87,11 @@ li {
     margin-bottom: 0.5rem;
 }
 
-
+@media(max-width:768px){
+    .about-hero-image img{
+        margin-right: -160px;
+    }
+}
 
 .about-hero-image img {
     max-width: 100%;
@@ -94,6 +99,7 @@ li {
     border-radius: 15px;
     box-shadow: 0 8px 25px var(--shadow);
     transition: transform 0.3s ease;
+    margin-left: -160px;
 }
 .school-image img{
     max-width: 100%;
