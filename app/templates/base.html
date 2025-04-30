@@ -13,9 +13,9 @@
 </head>
 <body>
   <!-- Navigation Bar -->
-<nav class="main-nav">
+  <nav class="main-nav">
     <div class="nav-container">
-        <div class="logo" >
+        <div class="logoo">
             <a href="{% url 'home' %}">
                 <img src="{% static 'images/MaryAngels_logo.png' %}" alt="Mary Angels Logo">
             </a>
@@ -29,33 +29,21 @@
         
         <ul class="nav-menu">
             <li class="nav-item">
-                <a href="{% url 'home' %}" class="nav-link {% if request.path == '/' %}active{% endif %}">
-                    <i class="fas fa-home"></i> Home
-                </a>
+                <a href="{% url 'home' %}" class="nav-link">Home</a>
             </li>
             <li class="nav-item">
-                <a href="{% url 'about' %}" class="nav-link {% if 'about' in request.path %}active{% endif %}">
-                    <i class="fas fa-info-circle"></i> About Us
-                </a>
+                <a href="{% url 'about' %}" class="nav-link">About Us</a>
             </li>
             <li class="nav-item">
-                <a href="{% url 'service' %}" class="nav-link {% if 'services' in request.path %}active{% endif %}">
-                    <i class="fas fa-cogs"></i> Services
-                </a>
+                <a href="{% url 'service' %}" class="nav-link">Services</a>
             </li>
             <li class="nav-item">
-                <a href="{% url 'gallery' %}" class="nav-link {% if 'gallery' in request.path %}active{% endif %}">
-                    <i class="fas fa-images"></i> Gallery
-                </a>
+                <a href="{% url 'gallery' %}" class="nav-link">Gallery</a>
             </li>
             <li class="nav-item">
-                <a href="{% url 'contact' %}" class="nav-link {% if 'contact' in request.path %}active{% endif %}">
-                    <i class="fas fa-envelope"></i> Contact Us
-                </a>
+                <a href="{% url 'contact' %}" class="nav-link">Contact Us</a>
             </li>
         </ul>
-        
-        
     </div>
 </nav>
 
@@ -63,19 +51,12 @@
 <div class="nav-spacer"></div>
     
     
-    
-    
-    
-
-
     {% block main_block %}
     {% endblock %}
     <footer>
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <img src="{% static 'images/MaryAngels_logo.png' %}" alt="Mary Angels Logo">
-                </div>
+            <div class="footer-content ">
+                
                 <div class="footer-links">
                     <h4>Quick Links</h4>
                     <ul>
@@ -115,6 +96,18 @@
             </div>
         </div>
     </footer>
+
+
+
+    <div class="fixed-buttons">
+        <a href="https://wa.me/+917012480055" target="_blank" class="whatsapp-btn">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="tel:+917012480055" class="call-btn">
+          <i class="fas fa-phone"></i>
+        </a>
+      </div>
+
 
     <script>
         // Mobile Navigation Menu Toggle

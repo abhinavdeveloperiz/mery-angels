@@ -12,8 +12,8 @@
                 <h1>One of The Best Montessori School and Early Child Care Centre in Kerala</h1>
                 <p>Nurturing young minds with care, creativity and compassion since 2010</p>
                 <div class="hero-buttons">
-                    <a href="contact.html" class="btn primary-btn">Enroll Now</a>
-                    <a href="about.html" class="btn secondary-btn">Learn More</a>
+                    <a href="#home" class="btn primary-btn">Enroll Now</a>
+                    <a href="tel:+917012480055" class="btn secondary-btn">Learn More</a>
                 </div>
             </div>
             <div class="hero-image">
@@ -22,7 +22,7 @@
         </div>
     </section>
 
-    <section class="highlights">
+    <section class="highlights" id="home">
         <div class="container">
             <div class="section-header">
                 <h2>Why Choose Mary Angels?</h2>
@@ -94,7 +94,7 @@
                 </div>
             </div>
             <div class="activity-cta">
-                <a href="" class="btn primary-btn">View All Activities</a>
+                <a href="{% url 'service' %}" class="btn primary-btn">View All Activities</a>
             </div>
         </div>
     </section>
@@ -128,10 +128,10 @@
                 <h2>Registration Open for 2025-26</h2>
                 <p>Limited seats available. Contact us today to secure your child's place!</p>
                 <div class="contact-numbers">
-                    <a href="tel:+917012480055"><i class="fas fa-phone-alt"></i> +91 70124 80055</a>
+                    <a href="tel:+917012480055"><i class="fas fa-phone-alt"></i> +91 701 248 0055</a>
                     <a href="tel:+919778332252"><i class="fas fa-phone-alt"></i> +91 977 833 2252</a>
                 </div>
-                <a href="" class="btn primary-btn">Register Now</a>
+                <a href="{% url 'contact' %}" class="btn primary-btn">Register Now</a>
             </div>
             <div class="cta-image">
                 <img src="{% static 'images/home.jpg' %}" alt="Happy children at Mary Angels">
