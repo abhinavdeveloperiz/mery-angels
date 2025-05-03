@@ -2,8 +2,8 @@
    Root & Base Styles
 ============================== */
 :root {
-    --primary: #7ecfff;
-    --accent: #98D8C8;
+    --primary: rgba(0, 0, 128, 1);
+    --accent: rgba(255, 145, 77, 0.9);
     --background: #fefcf9;
     --text: #333;
     --bubble: rgba(255, 182, 193, 0.3);

@@ -5,10 +5,10 @@
 
 /* Variables */
 :root {
-    --primary: #FF9E6D;     /* Soft coral */
-    --secondary: #7ECFFF;   /* Sky blue */
+    --primary: rgba(46, 0, 196, 0.9);     /* Soft coral */
+    --secondary: rgba(0, 0, 128, 1);    ;   /* Sky blue */
     --accent1: #FFDE59;     /* Sunshine yellow */
-    --accent2: #98D8C8;     /* Mint green */
+    --accent2: rgba(255, 145, 77, 0.9);     /* Mint green */
     --accent3: #F7B1CF;     /* Soft pink */
     --dark: #4A4A4A;        /* Dark gray for text */
     --light: #FFFFFF;       /* White */

@@ -1,146 +1,322 @@
-    {% extends 'base.html' %}
-    {% load static %}
-    {% block main_block %}
+{% extends 'base.html' %}
+{% load static %}
+{% block main_block %}
 
-    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
 
 
 
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>One of The Best Montessori School and Early Child Care Centre in Kerala</h1>
-                <p>Nurturing young minds with care, creativity and compassion since 2010</p>
-                <div class="hero-buttons">
-                    <a href="#home" class="btn primary-btn">Enroll Now</a>
-                    <a href="tel:+917012480055" class="btn secondary-btn">Learn More</a>
-                </div>
-            </div>
-            <div class="hero-image">
-                <img src="{% static 'images/home.jpg' %}" alt="Happy children learning">
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <h1>Excellence in Early Childhood Education</h1>
+            <p>Nurturing young minds with care, creativity and compassion since 2023</p>
+            <div class="hero-buttons">
+                <a href="#home" class="btn primary-btn">Enroll Now</a>
+                <a href="tel:+917012480055" class="btn secondary-btn">Learn More</a>
             </div>
         </div>
-    </section>
+        <div class="hero-image">
+            <img src="{% static 'media/4.jpg' %}" alt="Happy children learning">
+        </div>
+    </div>
+</section>
 
-    <section class="highlights" id="home">
-        <div class="container">
-            <div class="section-header">
-                <h2>Why Choose Mary Angels?</h2>
-                <p>Where learning meets play and growth happens every day</p>
+<section class="highlights" id="home">
+    <div class="container">
+        <div class="section-header">
+            <h2>Why Choose Mary Angels?</h2>
+            <p>Where learning meets play and growth happens every day</p>
+        </div>
+        <div class="highlight-cards">
+            <div class="card">
+                <div class="card-icon">
+                    <i class="fas fa-baby"></i>
+                </div>
+                <h3>Infant Care</h3>
+                <p>Specialized care for infants from 6 months to 2 years</p>
             </div>
-            <div class="highlight-cards">
-                <div class="card">
-                    <div class="card-icon">
-                        <i class="fas fa-baby"></i>
-                    </div>
-                    <h3>Infant Care</h3>
-                    <p>Specialized care for infants from 6 months to 2 years</p>
+            <div class="card">
+                <div class="card-icon">
+                    <i class="fas fa-child"></i>
                 </div>
-                <div class="card">
-                    <div class="card-icon">
-                        <i class="fas fa-child"></i>
-                    </div>
-                    <h3>Toddler Programs</h3>
-                    <p>Engaging activities for toddlers from 2 to 3 years</p>
+                <h3>Toddler Programs</h3>
+                <p>Engaging activities for toddlers from 2 to 3 years</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">
+                    <i class="fas fa-book-reader"></i>
                 </div>
-                <div class="card">
-                    <div class="card-icon">
-                        <i class="fas fa-book-reader"></i>
-                    </div>
-                    <h3>Pre-KG to Senior KG</h3>
-                    <p>Comprehensive education for children aged 3 to 6 years</p>
+                <h3>Pre-KG to Senior KG</h3>
+                <p>Comprehensive education for children aged 3 to 6 years</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">
+                    <i class="fas fa-home"></i>
                 </div>
-                <div class="card">
-                    <div class="card-icon">
-                        <i class="fas fa-home"></i>
-                    </div>
-                    <h3>Day Care Available</h3>
-                    <p>Extended hours from 7:30 AM to 6:00 PM</p>
-                </div>
+                <h3>Day Care Available</h3>
+                <p>Extended hours from 7:30 AM to 6:00 PM</p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section class="activities">
-        <div class="container">
-            <div class="section-header">
-                <h2>Our Activities</h2>
-                <p>Holistic development through diverse and engaging activities</p>
+<section class="activities">
+    <div class="container">
+        <div class="section-header">
+            <h2>Our Activities</h2>
+            <p>Holistic development through diverse and engaging activities</p>
+        </div>
+        <div class="activities-grid">
+            <div class="activity">
+                <img src="{% static 'images/home.jpg' %}" alt="Art and Craft">
+                <h3>Art and Craft</h3>
             </div>
-            <div class="activities-grid">
-                <div class="activity">
-                    <img src="{% static 'images/home.jpg' %}" alt="Art and Craft">
-                    <h3>Art and Craft</h3>
-                </div>
-                <div class="activity">
-                    <img src="{% static 'images/home.jpg' %}" alt="Yoga">
-                    <h3>Yoga</h3>
-                </div>
-                <div class="activity">
-                    <img src="{% static 'images/home.jpg' %}" alt="Zumba">
-                    <h3>Zumba</h3>
-                </div>
-                <div class="activity">
-                    <img src="{% static 'images/home.jpg' %}" alt="Non-Fire Cooking">
-                    <h3>Non-Fire Cooking</h3>
-                </div>
-                <div class="activity">
-                    <img src="{% static 'images/home.jpg' %}" alt="Storytelling">
-                    <h3>Storytelling</h3>
-                </div>
-                <div class="activity">
-                    <img src="{% static 'images/home.jpg' %}" alt="Music & Dance">
-                    <h3>Music & Dance</h3>
-                </div>
+            <div class="activity">
+                <img src="{% static 'images/home.jpg' %}" alt="Yoga">
+                <h3>Yoga</h3>
             </div>
-            <div class="activity-cta">
-                <a href="{% url 'service' %}" class="btn primary-btn">View All Activities</a>
+            <div class="activity">
+                <img src="{% static 'images/home.jpg' %}" alt="Zumba">
+                <h3>Zumba</h3>
+            </div>
+            <div class="activity">
+                <img src="{% static 'images/home.jpg' %}" alt="Non-Fire Cooking">
+                <h3>Kids Library</h3>
+            </div>
+            <div class="activity">
+                <img src="{% static 'images/home.jpg' %}" alt="Non-Fire Cooking">
+                <h3>Kids Cookery Activities</h3>
+            </div>
+            <div class="activity">
+                <img src="{% static 'images/home.jpg' %}" alt="Storytelling">
+                <h3>Storytelling</h3>
+            </div>
+            <div class="activity">
+                <img src="{% static 'images/home.jpg' %}" alt="Music & Dance">
+                <h3>Music & Dance</h3>
+            </div>
+            <div class="activity">
+                <img src="{% static 'images/home.jpg' %}" alt="Storytelling">
+                <h3>Abacus</h3>
+            </div>
+            <div class="activity">
+                <img src="{% static 'images/home.jpg' %}" alt="Music & Dance">
+                <h3>Educational Excursion</h3>
+            </div>
+            <div class="activity">
+                <img src="{% static 'images/home.jpg' %}" alt="Music & Dance">
+                <h3>Dynamic Summer Programs</h3>
             </div>
         </div>
-    </section>
-
-    <section class="testimonials">
-        <div class="container">
-            <div class="section-header">
-                <h2>What Parents Say</h2>
-                <p>Trusted by hundreds of families across Kerala</p>
-            </div>
-            <div class="testimonial-slider">
-                <div class="testimonial">
-                    <div class="testimonial-content">
-                        <p>"Mary Angels has been a second home for my daughter. The care and education provided are exceptional."</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <img src="{% static 'images/home.jpg' %}" alt="Parent">
-                        <div>
-                            <h4>Priya Thomas</h4>
-                            <p>Parent of Aanya, 4 years</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="activity-cta">
+            <a href="{% url 'service' %}" class="btn primary-btn">View All Activities</a>
         </div>
-    </section>
-
-    <section class="registration-cta">
-        <div class="container">
-            <div class="cta-content">
-                <h2>Registration Open for 2025-26</h2>
-                <p>Limited seats available. Contact us today to secure your child's place!</p>
-                <div class="contact-numbers">
-                    <a href="tel:+917012480055"><i class="fas fa-phone-alt"></i> +91 701 248 0055</a>
-                    <a href="tel:+919778332252"><i class="fas fa-phone-alt"></i> +91 977 833 2252</a>
-                </div>
-                <a href="{% url 'contact' %}" class="btn primary-btn">Register Now</a>
+    </div>
+</section>
+<section class="registration-cta">
+    <div class="container">
+        <div class="cta-content">
+            <h2>Registration Open for 2025-26</h2>
+            <p>Limited seats available. Contact us today to secure your child's place!</p>
+            <div class="contact-numbers">
+                <a href="tel:+917012480055"><i class="fas fa-phone-alt"></i> +91 701 248 0055</a>
+                <a href="tel:+919778332252"><i class="fas fa-phone-alt"></i> +91 977 833 2252</a>
             </div>
-            <div class="cta-image">
-                <img src="{% static 'images/home.jpg' %}" alt="Happy children at Mary Angels">
-            </div>
+            <a href="{% url 'contact' %}" class="btn primary-btn">Register Now</a>
         </div>
-    </section>
+        <div class="cta-image">
+            <img src="{% static 'media/1.jpg' %}" alt="Happy children at Mary Angels">
+        </div>
+    </div>
+</section>
+
+<!-- testimonials---------------------------  -->
+
+<div class="carousel-container">
+    <div class="section-header" style="margin-top: 50px;">
+        <h2>What Parents Say</h2>
+        <p>Trusted by hundreds of families across Kerala</p>
+    </div>
+    <div class="testimonial-carousel">
+
+        <!-- Testimonial 1 -->
+        <div class="testimonial">
+            <div class="testimonial-image">
+                <img src="/api/placeholder/150/150" alt="Anita Menon">
+            </div>
+            <div class="star-rating">⭐⭐⭐⭐⭐</div>
+            <p class="quote">"My daughter has grown so much in confidence since joining. The teachers are incredibly
+                caring, and the activities are both fun and educational."</p>
+            <p class="author">Anita Menon</p>
+            <p class="role">Mother of Aanya, Grade 2</p>
+        </div>
+
+        <!-- Testimonial 2 (4-star) -->
+        <div class="testimonial">
+            <div class="testimonial-image">
+                <img src="/api/placeholder/150/150" alt="Rajeev Krishnan">
+            </div>
+            <div class="star-rating">⭐⭐⭐⭐☆</div>
+            <p class="quote">"We’ve seen a big improvement in our son's social skills. The school environment is warm
+                and supportive, and the curriculum is truly engaging."</p>
+            <p class="author">Rajeev Krishnan</p>
+            <p class="role">Father of Arjun, Kindergarten</p>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="testimonial">
+            <div class="testimonial-image">
+                <img src="/api/placeholder/150/150" alt="Meera Thomas">
+            </div>
+            <div class="star-rating">⭐⭐⭐⭐⭐</div>
+            <p class="quote">"The school blends academics and extracurriculars beautifully. Our child loves going to
+                school every day, and we love seeing the spark in her eyes."</p>
+            <p class="author">Meera Thomas</p>
+            <p class="role">Mother of Sara, Grade 1</p>
+        </div>
+
+        <!-- Testimonial 4 (4-star) -->
+        <div class="testimonial">
+            <div class="testimonial-image">
+                <img src="/api/placeholder/150/150" alt="Joseph Abraham">
+            </div>
+            <div class="star-rating">⭐⭐⭐⭐☆</div>
+            <p class="quote">"The individual attention each child receives is amazing. Teachers really know each student
+                and help them thrive in their own way."</p>
+            <p class="author">Joseph Abraham</p>
+            <p class="role">Father of Neil, Grade 3</p>
+        </div>
+
+        <!-- Testimonial 5 -->
+        <div class="testimonial">
+            <div class="testimonial-image">
+                <img src="/api/placeholder/150/150" alt="Latha Nair">
+            </div>
+            <div class="star-rating">⭐⭐⭐⭐⭐</div>
+            <p class="quote">"From the communication with parents to the safety and cleanliness of the campus—this
+                school goes above and beyond. We couldn’t be happier."</p>
+            <p class="author">Latha Nair</p>
+            <p class="role">Mother of Diya, UKG</p>
+        </div>
+
+        <!-- Testimonial 6 -->
+        <div class="testimonial">
+            <div class="testimonial-image">
+                <img src="/api/placeholder/150/150" alt="Suresh Kumar">
+            </div>
+            <div class="star-rating">⭐⭐⭐⭐⭐</div>
+            <p class="quote">"The value-based education and focus on character building is what sets this school apart.
+                It’s not just about marks—it’s about raising good human beings."</p>
+            <p class="author">Suresh Kumar</p>
+            <p class="role">Father of Kavya, Grade 4</p>
+        </div>
+    </div>
+
+    <div class="controls">
+        <button class="control-btn prev">&#10094;</button>
+        <button class="control-btn next">&#10095;</button>
+    </div>
+
+    <div class="indicators">
+        <div class="indicator active" data-index="0"></div>
+        <div class="indicator" data-index="1"></div>
+        <div class="indicator" data-index="2"></div>
+        <div class="indicator" data-index="3"></div>
+        <div class="indicator" data-index="4"></div>
+        <div class="indicator" data-index="5"></div>
+    </div>
+</div>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const carousel = document.querySelector('.testimonial-carousel');
+        const testimonials = document.querySelectorAll('.testimonial');
+        const prevBtn = document.querySelector('.prev');
+        const nextBtn = document.querySelector('.next');
+        const indicators = document.querySelectorAll('.indicator');
+
+        let currentIndex = 0;
+        const totalTestimonials = testimonials.length;
+
+        function updateCarousel() {
+            carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+            // Update indicators
+            indicators.forEach((indicator, index) => {
+                if (index === currentIndex) {
+                    indicator.classList.add('active');
+                } else {
+                    indicator.classList.remove('active');
+                }
+            });
+        }
+
+        function goToNext() {
+            currentIndex = (currentIndex + 1) % totalTestimonials;
+            updateCarousel();
+        }
+
+        function goToPrev() {
+            currentIndex = (currentIndex - 1 + totalTestimonials) % totalTestimonials;
+            updateCarousel();
+        }
+
+        // Event listeners
+        nextBtn.addEventListener('click', goToNext);
+        prevBtn.addEventListener('click', goToPrev);
+
+        // Indicator clicks
+        indicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', () => {
+                currentIndex = index;
+                updateCarousel();
+            });
+        });
+
+        // Auto rotation (optional)
+        let autoRotate = setInterval(goToNext, 5000);
+
+        // Pause auto rotation on hover
+        carousel.addEventListener('mouseenter', () => {
+            clearInterval(autoRotate);
+        });
+
+        carousel.addEventListener('mouseleave', () => {
+            autoRotate = setInterval(goToNext, 5000);
+        });
+
+        // Touch events for mobile
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        carousel.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+
+        carousel.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        });
+
+        function handleSwipe() {
+            const threshold = 50;
+            if (touchEndX < touchStartX - threshold) {
+                goToNext();
+            } else if (touchEndX > touchStartX + threshold) {
+                goToPrev();
+            }
+        }
+    });
+</script>
 
 
 
 
 
-    {% endblock %}
+
+
+
+
+{% endblock %}

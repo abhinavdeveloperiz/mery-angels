@@ -232,7 +232,7 @@ a:hover {
 /* Simple CTA */
 .simple-cta {
     padding: 50px 0;
-    background-color: #FFD166;
+    background: linear-gradient(138deg, rgba(0, 0, 128, 1), rgba(255, 145, 77, 0.9));
     text-align: center;
 }
 
