@@ -451,6 +451,7 @@ img:hover {
 
 .category {
     margin-bottom: 4rem;
+
 }
 
 .category h3 {
@@ -462,22 +463,23 @@ img:hover {
     background-color: var(--light);
     border-radius: 30px;
     box-shadow: 0 5px 15px var(--shadow);
+    border-bottom: 3px solid blue;
 }
 
 .category:nth-child(1) h3 {
-    color: var(--primary);
-}
-
-.category:nth-child(2) h3 {
     color: var(--secondary);
 }
 
-.category:nth-child(3) h3 {
-    color: var(--accent2);
+.category:nth-child(1) h3 {
+    color: var(--secondary);
 }
 
-.category:nth-child(4) h3 {
-    color: var(--accent3);
+.category:nth-child(1) h3 {
+    color: var(--secondary);
+}
+
+.category:nth-child(1) h3 {
+    color: var(--secondary);
 }
 
 .activity-items {
