@@ -3,122 +3,212 @@
 {% block main_block %}
 <link rel="stylesheet" href="{% static 'css/contact.css' %}">
 
-<!-- Simple Contact Header -->
-<section class="contact-header">
-    <div class="container">
-        <h1>Contact Us</h1>
-        <p>We'd love to hear from you!</p>
-        <img src="{% static 'images/home.jpg' %}" alt="Mary Angels Montessori School" class="header-img">
+<!-- Hero Section with Animation -->
+<section class="contact-hero">
+    <div class="hero-content">
+        <div class="hero-text">
+            <h1 style="color: white;">Let's Connect</h1>
+            <p>We're excited to hear from you and help you learn more about Us</p>
+        </div>
+        <div class="hero-image">
+            <img src="{% static 'images/lib.jpeg' %}" alt="Happy Children">
+        </div>
     </div>
+
 </section>
 
-<!-- Quick Contact Details -->
+<!-- Quick Contact Section -->
 <section class="quick-contact">
     <div class="container">
-        <div class="contact-flex">
-            <div class="contact-item">
-                <i class="fas fa-phone-alt"></i>
+        <div class="contact-cards">
+            <div class="contact-card">
+                <div class="card-icon">
+                    <i class="fas fa-phone-alt"></i>
+                </div>
                 <h3>Call Us</h3>
-                <p><a href="tel:+917012480055">+91 701 248 0055</a></p>
-                <p><a href="tel:+919778332252">+91 977 833 2252</a></p>
+                <div class="contact-info">
+                    <a href="tel:+917012480055" class="contact-link d-flex justify-content-center">
+                        <i class="fas fa-mobile-alt"></i>
+                        +91 701 248 0055
+                    </a>
+                    <a href="tel:+919778332252" class="contact-link d-flex justify-content-center">
+                        <i class="fas fa-phone"></i>
+                        +91 977 833 2252
+                    </a>
+                </div>
             </div>
-            
-            <div class="contact-item">
-                <i class="fas fa-envelope"></i>
+
+            <div class="contact-card">
+                <div class="card-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
                 <h3>Email Us</h3>
-                <p><a href="mailto:info@maryangels.com">info@maryangels.com</a></p>
+                <div class="contact-info">
+                    <a href="mailto:info@maryangels.com" class="contact-link d-flex justify-content-center">
+
+                        <a href="mailto:maryangelskollam@gmail.com"><i class="fas fa-envelope"
+                                style="color: rgb(255, 149, 0);"></i> maryangelskollam@gmail.com</a>
+                    </a>
+                </div>
             </div>
-            
-            <div class="contact-item">
-                <i class="fas fa-clock"></i>
+
+            <div class="contact-card">
+                <div class="card-icon">
+                    <i class="fas fa-clock"></i>
+                </div>
                 <h3>School Hours</h3>
-                <p>9:00 AM - 3:30 PM</p>
-                <p>Day Care: 7:30 AM - 6:00 PM</p>
+                <div class="contact-info">
+                    <div class="time-slot d-flex justify-content-center">
+                        <i class="fas fa-sun" style="color: rgb(255, 149, 0);"></i>
+                        <span>(Mon-Sat) 7:30 AM - 6:00 PM</span>
+                    </div>
+
+                </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Simple Contact Form -->
-<section class="contact-form-section">
-    <div class="container">
-        <div class="form-container">
-            <h2>Send Us a Message</h2>
-            
-            <form action="" method="POST">
-                {% csrf_token %}
+<!-- Contact Form Section -->
+
+<!-- <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2>Send Us a Message</h2>
+                <p class="mb-3">Fill out the form below and we'll get back to you as soon as possible</p>
                 
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="name">Full Name</label>
-                        <input type="text" id="name" name="name" required>
+                {% if messages %}
+                <div class="alert alert-success">
+                    {% for message in messages %}
+                        {{ message }}
+                    {% endfor %}
+                </div>
+                {% endif %}
+                
+                <form action="" method="POST" class="contact-form">
+                    {% csrf_token %}
+                    
+                    {% if form.errors %}
+                    <div class="alert alert-danger">
+                        Please correct the errors below.
+                    </div>
+                    {% endif %}
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <i class="fas fa-user"></i>
+                                {{ form.name }}
+                            </div>
+                            {% if form.name.errors %}
+                            <div class="text-danger">{{ form.name.errors }}</div>
+                            {% endif %}
+                        </div>
+                        
+                        <div class="form-group">
+                            <div class="input-group">
+                                <i class="fas fa-envelope"></i>
+                                {{ form.email }}
+                            </div>
+                            {% if form.email.errors %}
+                            <div class="text-danger">{{ form.email.errors }}</div>
+                            {% endif %}
+                        </div>
                     </div>
                     
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                </div>
-                
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone" required>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <i class="fas fa-phone"></i>
+                                {{ form.phone }}
+                            </div>
+                            {% if form.phone.errors %}
+                            <div class="text-danger">{{ form.phone.errors }}</div>
+                            {% endif %}
+                        </div>
+                        
+                        <div class="form-group">
+                            <div class="input-group">
+                                <i class="fas fa-tag"></i>
+                                {{ form.subject }}
+                            </div>
+                            {% if form.subject.errors %}
+                            <div class="text-danger">{{ form.subject.errors }}</div>
+                            {% endif %}
+                        </div>
                     </div>
                     
-                    <div class="form-group">
-                        <label for="subject">Subject</label>
-                        <select id="subject" name="subject" required>
-                            <option value="">Select Subject</option>
-                            <option value="admission">Admission Inquiry</option>
-                            <option value="tour">School Tour Request</option>
-                            <option value="daycare">Day Care Inquiry</option>
-                            <option value="transport">Transportation Inquiry</option>
-                            <option value="feedback">Feedback</option>
-                            <option value="other">Other</option>
-                        </select>
+                    <div class="form-group full-width">
+                        <div class="input-group">
+                            <i class="fas fa-comment"></i>
+                            {{ form.message }}
+                        </div>
+                        {% if form.message.errors %}
+                        <div class="text-danger">{{ form.message.errors }}</div>
+                        {% endif %}
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        <span>Send Message</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div> -->
+
+
+<!-- Map Section -->
+<section class="map-section">
+    <div class="container">
+        <div class="map-container">
+            <div class="map-content">
+                <h2>Find Us</h2>
+                <p>We're conveniently located in the heart of the city, making it easy for you to visit us</p>
+                <div class="map-features">
+                    <div class="feature">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Easy to find location</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-parking"></i>
+                        <span>Ample parking space</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-bus"></i>
+                        <span>Public transport accessible</span>
                     </div>
                 </div>
-                
-                <div class="form-group full-width">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="4" required></textarea>
-                </div>
-                
-                <div class="form-group">
-                    <button type="submit" class="submit-btn">Send Message</button>
-                </div>
-            </form>
-        </div>
-    </div>
-</section>
-
-<!-- Location Section -->
-<section class="location-section">
-    <div class="container">
-        <div class="location-container">
-            <div class="location-info">
-                <h2>Visit Our School</h2>
-                <p><i class="fas fa-map-marker-alt"></i> Mary Angels Montessori School</p>
-                <p>Lions Nagar, Near congress Bhavan, Beach Road, kollam - 691010</p>
-                <p class="highlight-text">Day care facilities available 7:30 AM to 6:00 PM</p>
-                <p>Vehicle facility available for all students</p>
             </div>
-            <div class="location-map">
-                <img src="{% static 'images/home.jpg' %}" alt="Map" class="map-img">
+            <div class="map-image">
+               
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3942.010970118365!2d76.59394557483108!3d8.878569891176879!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x810fff1e5fe79047%3A0x6b1135d3973aa76f!2sMary%20Angels%20Montessori%20School!5e0!3m2!1sen!2sin!4v1746513566042!5m2!1sen!2sin"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Simple CTA -->
-<section class="simple-cta">
+<!-- CTA Section -->
+<section class="cta-section">
     <div class="container">
-        <h1 style="color: white;">After School Care Facility is available</h1>
-        <p>Secure a spot for your child at Mary Angels Montessori School</p>
-        <a href="tel:+917012480055" class="cta-button">Contact Us</a>
+        <div class="cta-content">
+            <h2 style="color: white;">Ready to Enroll Your Child?</h2>
+            <p>Limited seats available for the upcoming academic year. Contact us today to schedule a visit!</p>
+            <div class="cta-buttons">
+                <a href="tel:+917012480055" class="cta-btn primary">
+                    <i class="fas fa-phone-alt"></i>
+                    Call Now
+                </a>
+                <a href="https://wa.me/+917012480055" target="_blank" class="cta-btn secondary">
+                    <i class="fab fa-whatsapp"></i>
+                    WhatsApp
+                </a>
+            </div>
+        </div>
     </div>
 </section>
-
 
 {% endblock %}

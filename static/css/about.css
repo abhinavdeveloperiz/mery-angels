@@ -5,10 +5,10 @@
 
 /* Variables */
 :root {
-    --primary: #FF9E6D;     /* Soft coral */
+    --primary: #ff7b00;     /* Soft coral */
     --secondary: rgba(46, 0, 196, 0.9);   /* Sky blue */
     --accent1: #FFDE59;     /* Sunshine yellow */
-    --accent2: rgba(255, 145, 77, 0.9);     /* Mint green */
+    --accent2: rgba(255, 98, 0, 0.9);     /* Mint green */
     --accent3: #F7B1CF;     /* Soft pink */
     --dark: #4A4A4A;        /* Dark gray for text */
     --light: #FFFFFF;       /* White */
@@ -133,12 +133,13 @@ section {
 .about-hero::before {
     content: "";
     position: absolute;
-    top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
     background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
-    opacity: 0.5;
+    opacity: 0.9;
+    background-size: contain;
 }
 
 .about-hero-content {
@@ -479,5 +480,147 @@ section {
     
     .program-card, .feature {
         padding: 1.5rem;
+    }
+}
+
+/* Mission and Vision Section */
+.mission-vision {
+    background: linear-gradient(135deg, var(--light-bg) 0%, var(--light) 100%);
+    padding: 5rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.mission-vision::before {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: var(--accent1);
+    border-radius: 50%;
+    top: -100px;
+    right: -100px;
+    opacity: 0.2;
+}
+
+.mission-vision::after {
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-color: var(--accent3);
+    border-radius: 50%;
+    bottom: -75px;
+    left: -75px;
+    opacity: 0.2;
+}
+
+.mission-vision-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    position: relative;
+    z-index: 1;
+}
+
+.mission-card, .vision-card {
+    background: var(--light);
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.mission-card:hover, .vision-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.mission-card::before, .vision-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+}
+
+.mission-card .card-icon, .vision-card .card-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 2rem;
+    transition: transform 0.3s ease;
+}
+
+.vision-card .card-icon {
+    background: var(--secondary);
+}
+
+.mission-card:hover .card-icon, .vision-card:hover .card-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.card-icon i {
+    font-size: 2.5rem;
+    color: var(--light);
+}
+
+.mission-card h2, .vision-card h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: var(--dark);
+    position: relative;
+}
+
+.mission-card h2::after, .vision-card h2::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--accent1);
+    border-radius: 2px;
+}
+
+.mission-card p, .vision-card p {
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--dark);
+}
+
+/* Responsive Design for Mission and Vision */
+@media screen and (max-width: 992px) {
+    .mission-vision-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .mission-card, .vision-card {
+        padding: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .mission-card, .vision-card {
+        padding: 1rem;
+    }
+    
+    .mission-card h2, .vision-card h2 {
+        font-size: 2rem;
+    }
+    
+    .mission-card p, .vision-card p {
+        font-size: 1rem;
     }
 }

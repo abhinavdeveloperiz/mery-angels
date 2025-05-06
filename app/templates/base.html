@@ -60,39 +60,44 @@
                 <div class="footer-links">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="">Home</a></li>
-                        <li><a href="">Services</a></li>
-                        <li><a href="">About Us</a></li>
-                        <li><a href="">Gallery</a></li>
-                        <li><a href="">Contact Us</a></li>
+                        <li><a href="{% url 'home' %}">Home</a></li>
+                        <li><a href="{% url 'service' %}">Services</a></li>
+                        <li><a href="{% url 'about' %}">About Us</a></li>
+                        <li><a href="{% url 'gallery' %}">Gallery</a></li>
+                        <li><a href="{% url 'contact' %}">Contact Us</a></li>
                     </ul>
                 </div>
                 <div class="footer-contact">
                     <h4>Contact Us</h4>
                     <ul>
-                        <li><i class="fas fa-map-marker-alt"></i> Kochi, Kerala, India</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Kollam, Kerala, India</li>
                         <li><i class="fas fa-phone-alt"></i> +91 70124 80055</li>
                         <li><i class="fas fa-phone-alt"></i> +91 977 833 2252</li>
-                        <li><i class="fas fa-envelope"></i> info@maryangels.com</li>
+                        <li>
+                            <i class="fas fa-envelope"></i> 
+                            <a href="mailto:maryangelskollam@gmail.com">maryangelskollam@gmail.com</a>
+                          </li>
+                          
                     </ul>
                 </div>
                 <div class="footer-hours">
                     <h4>Hours of Operation</h4>
                     <ul>
-                        <li>Monday - Friday: 7:30 AM - 6:00 PM</li>
-                        <li>Saturday: 8:00 AM - 12:00 PM</li>
-                        <li>Sunday: Closed</li>
+                        <li>Monday - Saturday: 7:30 AM - 6:00 PM</li>
+                        <li>Sunday (Day Care): 9:00 AM - 1:00 PM</li>
+                        <br>
+                        <div class="social-icons">
+                            <a href="https://www.facebook.com/profile.php?id=61573151587642"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.instagram.com/maryangelsmontessori/"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.youtube.com/@MARYANGELS-i9p"><i class="fab fa-youtube"></i></a>
+                            <a href="https://wa.me/+917012480055"><i class="fab fa-whatsapp"></i></a>
+                        </div>
                     </ul>
                 </div>
+                
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Mary Angels Montessori School. All Rights Reserved.</p>
-                <div class="social-icons">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
-                    <a href="#"><i class="fab fa-whatsapp"></i></a>
-                </div>
+            <div class="footer-bottom d-flex justify-content-center align-items-center">
+                <p style="text-align: center;">&copy; 2025 Mary Angels | Designed and Developed By <a href="https://www.inspirezesttechnologies.com" class="text-light" rel="nofollow"><b>Inspirezest Technologies Pvt Ltd</b></a></p>
             </div>
         </div>
     </footer>
@@ -111,49 +116,57 @@
 
     <script>
         // Mobile Navigation Menu Toggle
-document.addEventListener('DOMContentLoaded', function() {
-    const mobileMenu = document.getElementById('mobile-menu');
-    const navMenu = document.querySelector('.nav-menu');
-    
-    if (mobileMenu) {
-        mobileMenu.addEventListener('click', function() {
-            this.classList.toggle('active');
-            navMenu.classList.toggle('active');
-        });
-    }
-    
-    // Close mobile menu when clicking a link
-    const navLinks = document.querySelectorAll('.nav-link');
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            mobileMenu.classList.remove('active');
-            navMenu.classList.remove('active');
-        });
-    });
-    
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', (event) => {
-        const isClickInsideMenu = navMenu.contains(event.target);
-        const isClickOnMenuToggle = mobileMenu.contains(event.target);
-        
-        if (!isClickInsideMenu && !isClickOnMenuToggle && navMenu.classList.contains('active')) {
-            mobileMenu.classList.remove('active');
-            navMenu.classList.remove('active');
-        }
-    });
-    
-    // Add shadow on scroll
-    window.addEventListener('scroll', function() {
-        const nav = document.querySelector('.main-nav');
-        if (window.scrollY > 10) {
-            nav.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.1)';
-        } else {
-            nav.style.boxShadow = '0 2px 15px rgba(0, 0, 0, 0.1)';
-        }
-    });
-});
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const navMenu = document.querySelector('.nav-menu');
+            
+            if (mobileMenu) {
+                mobileMenu.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                    navMenu.classList.toggle('active');
+                });
+            }
+            
+            // Close mobile menu when clicking a link
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (window.innerWidth <= 992) {
+                        mobileMenu.classList.remove('active');
+                        navMenu.classList.remove('active');
+                    }
+                });
+            });
+            
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', (event) => {
+                const isClickInsideMenu = navMenu.contains(event.target);
+                const isClickOnMenuToggle = mobileMenu.contains(event.target);
+                
+                if (!isClickInsideMenu && !isClickOnMenuToggle && navMenu.classList.contains('active')) {
+                    mobileMenu.classList.remove('active');
+                    navMenu.classList.remove('active');
+                }
+            });
+            
+            // Add shadow on scroll
+            window.addEventListener('scroll', function() {
+                const nav = document.querySelector('.main-nav');
+                if (window.scrollY > 10) {
+                    nav.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.1)';
+                } else {
+                    nav.style.boxShadow = '0 2px 15px rgba(0, 0, 0, 0.1)';
+                }
+            });
 
-
+            // Handle window resize
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 992) {
+                    mobileMenu.classList.remove('active');
+                    navMenu.classList.remove('active');
+                }
+            });
+        });
     </script>
     
 </body>
