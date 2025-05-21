@@ -23,36 +23,36 @@ def Contact_view(request):
 def contact(request):
     return render(request,'contact.html')
 
-    # if request.method == 'POST':
-    #     form = ContactForm(request.POST)
-    #     if form.is_valid():
-    #         # Save the form data to database
-    #         contact = form.save()
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            # Save the form data to database
+            contact = form.save()
             
-    #         # Prepare email content
-    #         subject = f'New Contact Form Submission: {contact.get_subject_display()}'
-    #         message = f'''
-    #         Name: {contact.name}
-    #         Email: {contact.email}
-    #         Phone: {contact.phone}
-    #         Subject: {contact.get_subject_display()}
-    #         Message: {contact.message}
+            # Prepare email content
+            subject = f'New Contact Form Submission: {contact.get_subject_display()}'
+            message = f'''
+            Name: {contact.name}
+            Email: {contact.email}
+            Phone: {contact.phone}
+            Subject: {contact.get_subject_display()}
+            Message: {contact.message}
             
-    #         This message was sent from the contact form on your website.
-    #         '''
+            This message was sent from the contact form on your website.
+            '''
             
-    #         # Send email to school owner
-    #         send_mail(
-    #             subject,
-    #             message,
-    #             settings.DEFAULT_FROM_EMAIL,
-    #             [settings.CONTACT_EMAIL],  # School owner's email
-    #             fail_silently=False,
-    #         )
+            # Send email to school owner
+            send_mail(
+                subject,
+                message,
+                settings.DEFAULT_FROM_EMAIL,
+                [settings.CONTACT_EMAIL],  # School owner's email
+                fail_silently=False,
+            )
             
-    #         messages.success(request, 'Thank you for your message. We will get back to you soon!')
-    #         return render(request, 'contact.html', {'form': ContactForm()})
-    # else:
-    #     form = ContactForm()
+            messages.success(request, 'Thank you for your message. We will get back to you soon!')
+            return render(request, 'contact.html', {'form': ContactForm()})
+    else:
+        form = ContactForm()
     
-    # return render(request, 'contact.html', {'form': form})
+    return render(request, 'contact.html', {'form': form})
