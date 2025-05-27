@@ -1,278 +1,258 @@
- {% extends 'base.html' %}
- {% load static %}
- {% block main_block %}
- <link rel="stylesheet" href="{% static 'css/gallery.css' %}">
- 
- <!-- Decorative bubbles -->
- <div class="bubble" style="top: 10%; left: 5%; animation-delay: 0s;"></div>
- <div class="bubble" style="top: 30%; left: 80%; animation-delay: 2s;"></div>
- <div class="bubble" style="top: 70%; left: 15%; animation-delay: 4s;"></div>
- <div class="bubble" style="top: 50%; left: 90%; animation-delay: 6s;"></div>
- 
- <header class="header">
-   <h1>Little Explorers Gallery</h1>
- </header>
- 
- <div class="gallery-container">
-   
-   <div class="gallery">
-     <!-- Fun Games -->
-     <div class="gallery-item" data-category="physical">
-       <img src="{% static 'media/11.jpg' %}" alt="Children playing fun games" class="gallery-image">
-       <div class="gallery-caption">
-         <h3>Fun Games</h3>
-         <p>Interactive games that promote teamwork</p>
-       </div>
-     </div>
-     
-     <!-- Art and Craft -->
-     <div class="gallery-item" data-category="arts">
-       <img src="{% static 'media/12.jpg' %}" alt="Art and craft session" class="gallery-image">
-       <div class="gallery-caption">
-         <h3>Art and Craft</h3>
-         <p>Unleashing creativity through hands-on projects</p>
-       </div>
-     </div>
-     
-     <!-- Yoga -->
-     <div class="gallery-item" data-category="physical">
-       <img src="{% static 'media/13.jpg' %}" alt="Kids doing yoga" class="gallery-image">
-       <div class="gallery-caption">
-         <h3>Yoga</h3>
-         <p>Mindfulness and flexibility for young bodies</p>
-       </div>
-     </div>
-     
-     <!-- Zumba -->
-     <div class="gallery-item" data-category="physical">
-       <img src="{% static 'media/14.jpg' %}" alt="Children in Zumba class" class="gallery-image">
-       <div class="gallery-caption">
-         <h3>Zumba</h3>
-         <p>Fun dance workouts to energetic music</p>
-       </div>
-     </div>
-     
-     <!-- Non-Fire Cooking -->
-     <div class="gallery-item" data-category="learning">
-       <img src="{% static 'media/15.jpg' %}" alt="Kids preparing no-cook recipes" class="gallery-image">
-       <div class="gallery-caption">
-         <h3>Non-Fire Cooking</h3>
-         <p>Safe culinary adventures for little chefs</p>
-       </div>
-     </div>
-     
-     <!-- Story Telling -->
-     <div class="gallery-item" data-category="creative">
-       <img src="{% static 'media/26.jpg' %}" alt="Storytelling session" class="gallery-image">
-       <div class="gallery-caption">
-         <h3>Story Telling</h3>
-         <p>Magical journeys through tales and imagination</p>
-       </div>
-     </div>
-     
-     <!-- Phonics Practice -->
-     <div class="gallery-item" data-category="learning">
-       <img src="{% static 'media/9.jpg' %}" alt="Children learning phonics" class="gallery-image">
-       <div class="gallery-caption">
-         <h3>Phonics Practice</h3>
-         <p>Building strong reading foundations</p>
-       </div>
-     </div>
-     
-     <!-- Abacus -->
-     <div class="gallery-item" data-category="learning">
-       <img src="{% static 'media/23.jpg' %}" alt="Abacus math learning" class="gallery-image">
-       <div class="gallery-caption">
-         <h3>Abacus</h3>
-         <p>Developing mental math skills</p>
-       </div>
-     </div>
-     
-     <!-- Aerobics -->
-     <div class="gallery-item" data-category="physical">
-       <img src="{% static 'media/7.jpg' %}" alt="Children doing aerobics" class="gallery-image">
-       <div class="gallery-caption">
-         <h3>Aerobics</h3>
-         <p>Keeping fit with fun exercise routines</p>
-       </div>
-     </div>
-     
-     <!-- Dance and Music -->
-     <div class="gallery-item" data-category="creative">
-       <img src="{% static 'media/20.jpg' %}" alt="Dance and music class" class="gallery-image">
-       <div class="gallery-caption">
-         <h3>Dance and Music</h3>
-         <p>Expressing rhythm and melody</p>
-       </div>
-     </div>
-     
-     <!-- Coloring Drawing -->
-     <div class="gallery-item" data-category="arts">
-       <img src="{% static 'media/5.jpg' %}" alt="Coloring and drawing activity" class="gallery-image">
-       <div class="gallery-caption">
-         <h3>Coloring & Drawing</h3>
-         <p>Exploring colors and shapes</p>
-       </div>
-     </div>
-     
-     <!-- Writing Practice -->
-     <div class="gallery-item" data-category="learning">
-       <img src="{% static 'media/4.jpg' %}" alt="Writing practice session" class="gallery-image">
-       <div class="gallery-caption">
-         <h3>Writing Practice</h3>
-         <p>Developing fine motor skills and literacy</p>
-       </div>
-     </div>
-   </div>
- </div>
- 
- <div class="gallery-container">
-   
+{% extends 'base.html' %}
+{% load static %}
+{% block main_block %}
+<link rel="stylesheet" href="{% static 'css/gallery.css' %}">
+
+<!-- Decorative bubbles -->
+<div class="bubble" style="top: 10%; left: 5%; animation-delay: 0s;"></div>
+<div class="bubble" style="top: 30%; left: 80%; animation-delay: 2s;"></div>
+<div class="bubble" style="top: 70%; left: 15%; animation-delay: 4s;"></div>
+<div class="bubble" style="top: 50%; left: 90%; animation-delay: 6s;"></div>
+
+<header class="header">
+  <h1>Little Explorers Gallery</h1>
+</header>
+
+<div class="gallery-container">
+  
   <div class="gallery">
     <!-- Fun Games -->
     <div class="gallery-item" data-category="physical">
-      <img src="{% static 'gallery/1.jpg' %}" alt="Children playing fun games" class="gallery-image">
+      <img src="{% static 'media/11.jpg' %}"class="gallery-image">
       <div class="gallery-caption">
-        <h3>Fun Games</h3>
-        <p>Interactive games that promote teamwork</p>
       </div>
     </div>
     
     <!-- Art and Craft -->
     <div class="gallery-item" data-category="arts">
-      <img src="{% static 'gallery/2.jpg' %}" alt="Art and craft session" class="gallery-image">
+      <img src="{% static 'media/12.jpg' %}" class="gallery-image">
       <div class="gallery-caption">
-        <h3>Art and Craft</h3>
-        <p>Unleashing creativity through hands-on projects</p>
+   
       </div>
     </div>
     
     <!-- Yoga -->
     <div class="gallery-item" data-category="physical">
-      <img src="{% static 'gallery/3.jpg' %}" alt="Kids doing yoga" class="gallery-image">
+      <img src="{% static 'media/13.jpg' %}" class="gallery-image">
       <div class="gallery-caption">
-        <h3>Yoga</h3>
-        <p>Mindfulness and flexibility for young bodies</p>
+    
       </div>
     </div>
     
     <!-- Zumba -->
     <div class="gallery-item" data-category="physical">
-      <img src="{% static 'gallery/4.jpg' %}" alt="Children in Zumba class" class="gallery-image">
+      <img src="{% static 'media/14.jpg' %}" class="gallery-image">
       <div class="gallery-caption">
-        <h3>Zumba</h3>
-        <p>Fun dance workouts to energetic music</p>
+   
       </div>
     </div>
     
     <!-- Non-Fire Cooking -->
     <div class="gallery-item" data-category="learning">
-      <img src="{% static 'gallery/5.jpg' %}" alt="Kids preparing no-cook recipes" class="gallery-image">
+      <img src="{% static 'media/15.jpg' %}" class="gallery-image">
       <div class="gallery-caption">
-        <h3>Non-Fire Cooking</h3>
-        <p>Safe culinary adventures for little chefs</p>
+     
       </div>
     </div>
     
     <!-- Story Telling -->
     <div class="gallery-item" data-category="creative">
-      <img src="{% static 'gallery/6.jpg' %}" alt="Storytelling session" class="gallery-image">
+      <img src="{% static 'media/26.jpg' %}" class="gallery-image">
       <div class="gallery-caption">
-        <h3>Story Telling</h3>
-        <p>Magical journeys through tales and imagination</p>
+ 
       </div>
     </div>
     
     <!-- Phonics Practice -->
     <div class="gallery-item" data-category="learning">
-      <img src="{% static 'gallery/7.jpg' %}" alt="Children learning phonics" class="gallery-image">
+      <img src="{% static 'media/9.jpg' %}" class="gallery-image">
       <div class="gallery-caption">
-        <h3>Phonics Practice</h3>
-        <p>Building strong reading foundations</p>
+
       </div>
     </div>
     
     <!-- Abacus -->
     <div class="gallery-item" data-category="learning">
-      <img src="{% static 'gallery/8.jpg' %}" alt="Abacus math learning" class="gallery-image">
+      <img src="{% static 'media/23.jpg' %}" class="gallery-image">
       <div class="gallery-caption">
-        <h3>Abacus</h3>
-        <p>Developing mental math skills</p>
+
       </div>
     </div>
     
     <!-- Aerobics -->
     <div class="gallery-item" data-category="physical">
-      <img src="{% static 'gallery/9.jpg' %}" alt="Children doing aerobics" class="gallery-image">
+      <img src="{% static 'media/7.jpg' %}" class="gallery-image">
       <div class="gallery-caption">
-        <h3>Aerobics</h3>
-        <p>Keeping fit with fun exercise routines</p>
+   
       </div>
     </div>
     
     <!-- Dance and Music -->
     <div class="gallery-item" data-category="creative">
-      <img src="{% static 'gallery/10.jpg' %}" alt="Dance and music class" class="gallery-image">
+      <img src="{% static 'media/20.jpg' %}" class="gallery-image">
       <div class="gallery-caption">
-        <h3>Dance and Music</h3>
-        <p>Expressing rhythm and melody</p>
+    
       </div>
     </div>
     
     <!-- Coloring Drawing -->
     <div class="gallery-item" data-category="arts">
-      <img src="{% static 'gallery/11.jpg' %}" alt="Coloring and drawing activity" class="gallery-image">
+      <img src="{% static 'media/5.jpg' %}" class="gallery-image">
       <div class="gallery-caption">
-        <h3>Coloring & Drawing</h3>
-        <p>Exploring colors and shapes</p>
+   
       </div>
     </div>
     
     <!-- Writing Practice -->
     <div class="gallery-item" data-category="learning">
-      <img src="{% static 'gallery/12.jpg' %}" alt="Writing practice session" class="gallery-image">
+      <img src="{% static 'media/4.jpg' %}" class="gallery-image">
       <div class="gallery-caption">
-        <h3>Writing Practice</h3>
-        <p>Developing fine motor skills and literacy</p>
+ 
       </div>
     </div>
   </div>
 </div>
 
+<div class="gallery-container">
+  
+ <div class="gallery">
+   <!-- Fun Games -->
+   <div class="gallery-item" data-category="physical">
+     <img src="{% static 'gallery/1.jpg' %}" class="gallery-image">
+     <div class="gallery-caption">
 
- <script>
-   document.addEventListener('DOMContentLoaded', function() {
-     // Add filter functionality
-     const filterButtons = document.querySelectorAll('.filter-button');
-     const galleryItems = document.querySelectorAll('.gallery-item');
-     
-     filterButtons.forEach(button => {
-       button.addEventListener('click', function() {
-         // Remove active class from all buttons
-         filterButtons.forEach(btn => btn.classList.remove('active'));
-         
-         // Add active class to clicked button
-         this.classList.add('active');
-         
-         const filterValue = this.getAttribute('data-filter');
-         
-         galleryItems.forEach(item => {
-           if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
-             item.classList.remove('hidden');
-           } else {
-             item.classList.add('hidden');
-           }
-         });
-       });
-     });
-     
-     // Add floating effect to gallery items
-     let delay = 0;
-     galleryItems.forEach(item => {
-       item.style.animationDelay = `${delay}s`;
-       delay += 0.1;
-       if (delay > 1) delay = 0;
-     });
-   });
- </script>
- {% endblock %}
+     </div>
+   </div>
+   
+   <!-- Art and Craft -->
+   <div class="gallery-item" data-category="arts">
+     <img src="{% static 'gallery/2.jpg' %}" class="gallery-image">
+     <div class="gallery-caption">
+
+     </div>
+   </div>
+   
+   <!-- Yoga -->
+   <div class="gallery-item" data-category="physical">
+     <img src="{% static 'gallery/3.jpg' %}" class="gallery-image">
+     <div class="gallery-caption">
+   
+     </div>
+   </div>
+   
+   <!-- Zumba -->
+   <div class="gallery-item" data-category="physical">
+     <img src="{% static 'gallery/4.jpg' %}" class="gallery-image">
+     <div class="gallery-caption">
+  
+     </div>
+   </div>
+   
+   <!-- Non-Fire Cooking -->
+   <div class="gallery-item" data-category="learning">
+     <img src="{% static 'gallery/5.jpg' %}" class="gallery-image">
+     <div class="gallery-caption">
+
+     </div>
+   </div>
+   
+   <!-- Story Telling -->
+   <div class="gallery-item" data-category="creative">
+     <img src="{% static 'gallery/6.jpg' %}" class="gallery-image">
+     <div class="gallery-caption">
+  
+     </div>
+   </div>
+   
+   <!-- Phonics Practice -->
+   <div class="gallery-item" data-category="learning">
+     <img src="{% static 'gallery/7.jpg' %}" class="gallery-image">
+     <div class="gallery-caption">
+ 
+     </div>
+   </div>
+   
+   <!-- Abacus -->
+   <div class="gallery-item" data-category="learning">
+     <img src="{% static 'gallery/8.jpg' %}" class="gallery-image">
+     <div class="gallery-caption">
+
+     </div>
+   </div>
+   
+   <!-- Aerobics -->
+   <div class="gallery-item" data-category="physical">
+     <img src="{% static 'gallery/9.jpg' %}" class="gallery-image">
+     <div class="gallery-caption">
+  
+     </div>
+   </div>
+   
+   <!-- Dance and Music -->
+   <div class="gallery-item" data-category="creative">
+     <img src="{% static 'gallery/10.jpg' %}" class="gallery-image">
+     <div class="gallery-caption">
+ 
+     </div>
+   </div>
+   
+   <!-- Coloring Drawing -->
+   <div class="gallery-item" data-category="arts">
+     <img src="{% static 'gallery/11.jpg' %}" class="gallery-image">
+     <div class="gallery-caption">
+  
+     </div>
+   </div>
+   
+   <!-- Writing Practice -->
+   <div class="gallery-item" data-category="learning">
+     <img src="{% static 'gallery/12.jpg' %}" class="gallery-image">
+     <div class="gallery-caption">
+    
+     </div>
+   </div>
+ </div>
+</div>
+
+<!-- Image Modal -->
+<div id="imageModal" class="image-modal">
+  <div class="modal-content">
+    <span class="close-button" id="closeModal">&times;</span>
+    <img id="modalImage" class="modal-image" src="" alt="">
+    <div id="modalCaption" class="modal-caption">
+      <h3 id="modalTitle"></h3>
+      <p id="modalDescription"></p>
+    </div>
+  </div>
+</div>
+
+
+
+<script>
+  const modal = document.getElementById("imageModal");
+  const modalImg = document.getElementById("modalImage");
+  const modalTitle = document.getElementById("modalTitle");
+  const modalDesc = document.getElementById("modalDescription");
+  const closeModal = document.getElementById("closeModal");
+
+  document.querySelectorAll(".gallery-image").forEach(image => {
+    image.addEventListener("click", function () {
+      modal.style.display = "block";
+      modalImg.src = this.src;
+      modalTitle.innerText = this.alt;
+      modalDesc.innerText = ""; // Add description if needed
+    });
+  });
+
+  closeModal.onclick = function () {
+    modal.style.display = "none";
+  };
+
+  window.onclick = function (event) {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  };
+</script>
+
+{% endblock %}
