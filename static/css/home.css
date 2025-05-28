@@ -808,3 +808,28 @@
         padding: 1.5rem;
     }
 }
+
+
+/* readmore========================================= */
+.quote {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Show only 3 lines */
+    -webkit-box-orient: vertical;
+    transition: all 0.3s ease;
+}
+
+.quote.expanded {
+    -webkit-line-clamp: unset;
+    max-height: none;
+}
+
+.read-more-btn {
+    background: none;
+    border: none;
+    color: #007BFF;
+    cursor: pointer;
+    padding: 0;
+    font-weight: bold;
+    margin-top: 5px;
+}
