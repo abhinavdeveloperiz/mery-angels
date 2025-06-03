@@ -18,7 +18,7 @@ def Service_view(request):
 
 from .models import gallery_images
 def Gallery_view(request):
-    images=gallery_images.objects.all()
+    images=gallery_images.objects.all().order_by("-id")
     context = {
         'images': images
     }
