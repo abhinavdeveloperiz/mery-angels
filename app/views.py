@@ -4,9 +4,10 @@ from django.conf import settings
 from django.contrib import messages
 
 # Create your views here.
-
+from app.models import Home_image
 def Home_view(request):
-    return render(request,"home.html")
+    home_images = Home_image.objects.first()
+    return render(request,"home.html",{"image":home_images})
 
 def About_view(request):
     return render(request,"about.html")
@@ -14,11 +15,19 @@ def About_view(request):
 def Service_view(request):
     return render(request,"service.html")
 
+
+from .models import gallery_images
 def Gallery_view(request):
-    return render(request,"gallery.html")
+    images=gallery_images.objects.all()
+    context = {
+        'images': images
+    }
+    return render(request,"gallery.html",context)
+
 
 def Contact_view(request):
     return render(request,"contact.html")
+
 
 def contact(request):
     return render(request,'contact.html')

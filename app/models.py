@@ -1,4 +1,4 @@
-# from django.db import models
+from django.db import models
 
 # # Create your models here.
 
@@ -25,3 +25,15 @@
 
 #     class Meta:
 #         ordering = ['-created_at']
+
+
+class gallery_images(models.Model):
+
+    image = models.ImageField(upload_to='gallery_images/')
+
+class Home_image(models.Model):
+    image = models.ImageField(upload_to='home_images/')
+    
+
+
+

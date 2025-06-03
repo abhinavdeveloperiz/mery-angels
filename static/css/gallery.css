@@ -9,7 +9,14 @@
     --bubble: rgba(255, 182, 193, 0.3);
     --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
-  
+
+
+  .nav-link{
+    margin-top: 40px;
+  }
+
+
+
   body {
     margin: 0;
     padding: 0;
